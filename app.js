@@ -1,6 +1,8 @@
 const express = require('express')
+var path = require('path');
 const app = express()
 
+app.use('/static', express.static(path.join(__dirname, 'static')));
 var mustacheExpress = require('mustache-express');
 app.engine('mustache', mustacheExpress());
 app.set('view engine', 'mustache');
