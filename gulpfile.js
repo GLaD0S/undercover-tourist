@@ -13,6 +13,7 @@ var files = {
 		devLocation + '/sass/app.scss'
 	],
 	'js': [
+		devLocation + '/vendor/js/jquery-3.2.1.min.js'
 	],
 	'sassWatch': [
 		devLocation + '/sass/**/*.*'
@@ -31,6 +32,8 @@ gulp.task('sass', function(){
 gulp.task('js-concat', function() {
   return gulp.src(files.js)
     .pipe(concat('app.js'))
+    .pipe(gulp.dest(prodLocation + '/js/'))
+    .pipe(rename('app.min.js'))
     .pipe(gulp.dest(prodLocation + '/js/'));
 });
 
