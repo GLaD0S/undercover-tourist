@@ -16,7 +16,8 @@ var files = {
 		devLocation + '/vendor/js/jquery-3.2.1.min.js'
 	],
 	'sassWatch': [
-		devLocation + '/sass/**/*.*'
+		devLocation + '/sass/**/*.*',
+		devLocation + '/blocks/**/*.*',
 	]
 }
 

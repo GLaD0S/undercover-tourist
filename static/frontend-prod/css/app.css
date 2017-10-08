@@ -609,6 +609,7 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 
+/* Override sass mq settings to fit foundation breakpoints. */
 @font-face {
   font-family: Oswald;
   src: url("/static/assets/fonts/Oswald-Regular.ttf");
@@ -622,9 +623,62 @@ textarea {
 @font-face {
   font-family: ProximaNova;
   src: url("/static/assets/fonts/ProximaNova-RegularItalic.otf");
-  font-weight: 400; }
+  font-weight: 400;
+  font-style: italic; }
 
 @font-face {
   font-family: ProximaNova;
   src: url("/static/assets/fonts/ProximaNova-Bold.otf");
   font-weight: 700; }
+
+/*
+	Colors
+*/
+/* 
+	Blocks
+*/
+/* Banner Block */
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 320px;
+  position: relative;
+  background-position: center center; }
+
+.banner .banner__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(92, 171, 195, 0.85);
+  background-size: cover; }
+
+.banner .banner__cta {
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  left: 200px; }
+
+@media (max-width: 63.99em) {
+  .banner .banner__cta {
+    left: auto;
+    margin: 0 auto;
+    width: 60%; } }
+
+@media (max-width: 39.99em) {
+  .banner .banner__cta {
+    width: 80%; } }
+
+.banner .banner__cta .banner__cta-inner {
+  padding: 30px 40px 30px 40px;
+  display: inline-block;
+  border: 1px solid #FFFFFF; }
+
+.banner__cta .banner__cta-inner h1.banner__cta-text {
+  line-height: 59px;
+  font-family: Oswald;
+  font-weight: 400;
+  font-size: 45px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0; }

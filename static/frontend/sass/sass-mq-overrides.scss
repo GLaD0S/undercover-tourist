@@ -1,0 +1,8 @@
+ /* Override sass mq settings to fit foundation breakpoints. */
+ $mq-breakpoints: (
+     mobile:  320px,
+     tablet:  640px,
+     desktop: 1024px,
+     medium: 640px,
+     large: 1024px,
+ );
