@@ -1,0 +1,64 @@
+/*
+    A sass mixin approach for a very micro form grid.
+    Good for simple forms, where form row margin and form item spacing is not consistent across site or page.
+*/
+
+@mixin form-grid($selectors, $rowMargin, $itemPad) {
+    #{$selectors} {
+        input, select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        select  {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .form-row {
+            width: 100%;
+            margin-bottom: $rowMargin;
+
+            &::after {
+                content: "."; 
+                visibility: hidden; 
+                display: block; 
+                height: 0; 
+                clear: both;
+            }
+        }
+        
+        .form-row {
+            .form-item {
+                float: left;
+            }
+        }
+
+        .form-row {
+            .form-item-width-100 {
+                width: 100%;
+            }
+        }
+        
+        .form-row {
+            .form-item-width-50 {
+                width: calc(50% - (#{$itemPad}/2));
+                margin-right: $itemPad;
+            }
+        }
+
+        .form-row {
+            .form-item-width-33 {
+                width: calc(33% - (#{$itemPad * 2}/3));
+                margin-right: $itemPad;
+            }
+        }
+
+        .form-row {
+            .form-item:last-child {
+                margin-right: 0px; 
+            }
+        }
+    }
+}

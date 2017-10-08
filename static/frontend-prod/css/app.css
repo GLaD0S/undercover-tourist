@@ -634,6 +634,24 @@ textarea {
 /*
 	Colors
 */
+/* A SASS Mixin for a border arrow. Direction can be top, left, bottom, or right. */
+/*
+    A sass mixin approach for a very micro form grid.
+    Good for simple forms, where form row margin and form item spacing is not consistent across site or page.
+*/
+#page-wrapper {
+  padding-left: 50px;
+  padding-right: 50px; }
+  #page-wrapper #page-body {
+    width: calc(100% - 340px);
+    float: left;
+    height: 200px; }
+  #page-wrapper #page-sidebar {
+    max-width: 340px;
+    float: left;
+    position: relative;
+    bottom: 50px; }
+
 /* 
 	Blocks
 */
@@ -682,3 +700,166 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0; }
+
+/* Itineray Form */
+#itinerary-form__form input, #itinerary-form__form select, #itinerary-form__form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: block; }
+
+#itinerary-form__form select {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+#itinerary-form__form .form-row {
+  width: 100%;
+  margin-bottom: 15px; }
+  #itinerary-form__form .form-row::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both; }
+
+#itinerary-form__form .form-row .form-item {
+  float: left; }
+
+#itinerary-form__form .form-row .form-item-width-100 {
+  width: 100%; }
+
+#itinerary-form__form .form-row .form-item-width-50 {
+  width: calc(50% - (10px/2));
+  margin-right: 10px; }
+
+#itinerary-form__form .form-row .form-item-width-33 {
+  width: calc(33% - (20px/3));
+  margin-right: 10px; }
+
+#itinerary-form__form .form-row .form-item:last-child {
+  margin-right: 0px; }
+
+#itinerary-form {
+  position: relative;
+  background: #D8EEEF;
+  border: 4px solid #CFE0E2; }
+
+#itinerary-form:after, #itinerary-form:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+#itinerary-form:after {
+  border-top-color: #D8EEEF;
+  border-width: 30px;
+  margin-left: -30px; }
+
+#itinerary-form:before {
+  border-top-color: #CFE0E2;
+  border-width: 32px;
+  margin-left: -32px; }
+
+#itinerary-form {
+  padding: 25px 15px;
+  background-color: #D8EEEF;
+  max-width: 340px;
+  border: 2px solid #CFE0E2; }
+
+#itinerary-form .itinerary-form__avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  margin-bottom: 15px; }
+
+#itinerary-form .itinerary-form__title {
+  text-align: center; }
+  #itinerary-form .itinerary-form__title h1 {
+    color: #205F72;
+    font-family: ProximaNova;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+
+#itinerary-form__container {
+  max-width: 280px;
+  margin: 0 auto; }
+
+#itinerary-form__form select {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  background: #FFFFFF url("/static/assets/images/circle-arrow-down-blue.svg") no-repeat;
+  background-size: 15px;
+  background-position: right 10px center;
+  padding-left: 24px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px; }
+
+#itinerary-form__form input, #itinerary-form__form select {
+  font-family: ProximaNova;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 11px 11px;
+  border: 2px solid #E3E3E3;
+  height: 38px;
+  color: #4E4E4E; }
+  #itinerary-form__form input::-webkit-input-placeholder, #itinerary-form__form select::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #A9A8A8; }
+  #itinerary-form__form input::-moz-placeholder, #itinerary-form__form select::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #A9A8A8; }
+  #itinerary-form__form input:-ms-input-placeholder, #itinerary-form__form select:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #A9A8A8; }
+  #itinerary-form__form input:-moz-placeholder, #itinerary-form__form select:-moz-placeholder {
+    /* Firefox 18- */
+    color: #A9A8A8; }
+
+#itinerary-form__form label {
+  color: #4E4E4E;
+  font-family: ProximaNova;
+  font-size: 13px;
+  font-weight: 400; }
+
+#itinerary-form__form input[type='submit'] {
+  background-color: #F6A129;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700; }
+
+/* Override form-grid defaults for 33% width items */
+#itinerary-form__form .form-row .itinerary-city {
+  width: 120px; }
+
+#itinerary-form__form .form-row .itinerary-state {
+  width: 70px; }
+
+#itinerary-form__form .form-row .itinerary-zip {
+  width: 70px; }
+
+#itinerary-form__form .itinerary-form__form-row-last {
+  margin-bottom: 25px; }
+
+@media (max-width: 39.99em) {
+  #itinerary-form__container {
+    padding-left: 0;
+    padding-right: 0; } }

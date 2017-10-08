@@ -1,0 +1,17 @@
+#page-wrapper {
+	padding-left: 50px;
+	padding-right: 50px;
+
+	#page-body {
+		width: calc(100% - #{$itineraryFormContainerWidth});
+		float: left;
+		height: 200px;
+	}
+	
+	#page-sidebar {
+		max-width: $itineraryFormContainerWidth;
+		float: left;
+		position: relative;
+		bottom: 50px;
+	}
+}
