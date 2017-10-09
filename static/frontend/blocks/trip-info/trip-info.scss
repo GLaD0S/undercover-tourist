@@ -1,0 +1,106 @@
+$descriptionSectionMargin: 30px;
+
+.trip-info {
+
+}
+
+.trip-info {
+	.trip-info__heading {
+
+	}	
+}
+
+.trip-info {
+	.trip-info__heading {
+		h1 {
+			font-family: Oswald;
+			font-size: 23px;
+			text-transform: uppercase;
+			color: $oceanTurtleBlue;
+			letter-spacing: 1px;
+		}		
+	}	
+}
+
+.trip-info {
+	.trip-info__heading {
+		h2 {
+			font-family: ProximaNova;
+			font-size: 18px;
+			font-weight: 700;
+			color: $textGrey;
+			margin-bottom: 20px;
+		}		
+	}	
+}
+
+.trip-info {
+	.trip-info__description {
+		margin-bottom: 10px;
+		&:after {
+			content: "."; 
+            visibility: hidden; 
+            display: block; 
+            height: 0; 
+            clear: both;
+		}
+	}	
+}
+
+.trip-info {
+	.trip-info__description {
+		.trip-info__description-section {
+			float: left;
+			width: calc(50% - #{$descriptionSectionMargin / 2});
+			margin-right: 30px;
+		}
+		.trip-info__description-section:last-child {
+			margin-right: 0px;
+		}
+	}	
+}
+
+@include mq($until: medium) {
+	.trip-info {
+		.trip-info__description {
+			.trip-info__description-section {
+				float: none;
+				width: 100%;
+				margin-right: 0px;
+			}
+		}	
+	}
+}
+
+.trip-info__description {
+	.trip-info__description-section {
+		p {
+			font-family: ProximaNova;
+			font-size: 16px;
+			color: $textBlack;
+			margin-top: 0px;
+		}
+	}
+}
+
+.trip-info {
+	.trip-info__continue-reading {
+		
+	}	
+}
+
+.trip-info {
+	.trip-info__continue-reading {
+		a {
+			@include link-no-style($oceanTurtleBlue);
+			letter-spacing: 1px;
+			display: inline-block;
+			border: 1px solid $oceanTurtleBlue;
+			border-radius: 3px;
+			font-family: ProximaNova;
+			font-size: 13px;
+			text-transform: uppercase;
+			padding: 12px 40px;
+		}
+	}	
+}

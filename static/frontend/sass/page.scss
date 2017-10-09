@@ -5,6 +5,13 @@ $pageBodyMarginRight: 30px;
 	padding-right: 50px;
 }
 
+@include mq($until: medium) {
+	#page-wrapper {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 #page-wrapper {
 	#page-body {
 		width: calc(100% - #{$itineraryFormContainerWidth} - #{$pageBodyMarginRight});
@@ -40,6 +47,29 @@ $pageBodyMarginRight: 30px;
 		}
 	}
 }
+
+/* Trip Info Block page specific spacing */
+
+#page-wrapper {
+	#page-body {
+		.trip-info {
+			margin-top: 35px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+/* Accordion Block page specific spacing */
+#page-wrapper {
+	#page-body {
+		.accordion {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+/* Itinerary Form Block page specific spacing */
 
 #page-wrapper {
 	#page-sidebar {

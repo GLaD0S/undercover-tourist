@@ -643,6 +643,11 @@ textarea {
   padding-left: 50px;
   padding-right: 50px; }
 
+@media (max-width: 39.99em) {
+  #page-wrapper {
+    padding-left: 20px;
+    padding-right: 20px; } }
+
 #page-wrapper #page-body {
   width: calc(100% - 320px - 30px);
   margin-right: 30px;
@@ -665,6 +670,16 @@ textarea {
     bottom: auto;
     float: none; } }
 
+/* Trip Info Block page specific spacing */
+#page-wrapper #page-body .trip-info {
+  margin-top: 35px;
+  margin-bottom: 40px; }
+
+/* Accordion Block page specific spacing */
+#page-wrapper #page-body .accordion {
+  margin-bottom: 40px; }
+
+/* Itinerary Form Block page specific spacing */
 #page-wrapper #page-sidebar #itinerary-form {
   margin-bottom: 45px; }
 
@@ -1002,3 +1017,71 @@ ul.dont-forget__list li.dont-forget__list-item:before {
   font-style: italic;
   color: #5CABC3;
   margin: 0; }
+
+/* Trip Info Block */
+.trip-info .trip-info__heading h1 {
+  font-family: Oswald;
+  font-size: 23px;
+  text-transform: uppercase;
+  color: #5CABC3;
+  letter-spacing: 1px; }
+
+.trip-info .trip-info__heading h2 {
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4E4E4E;
+  margin-bottom: 20px; }
+
+.trip-info .trip-info__description {
+  margin-bottom: 10px; }
+  .trip-info .trip-info__description:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both; }
+
+.trip-info .trip-info__description .trip-info__description-section {
+  float: left;
+  width: calc(50% - 15px);
+  margin-right: 30px; }
+
+.trip-info .trip-info__description .trip-info__description-section:last-child {
+  margin-right: 0px; }
+
+@media (max-width: 39.99em) {
+  .trip-info .trip-info__description .trip-info__description-section {
+    float: none;
+    width: 100%;
+    margin-right: 0px; } }
+
+.trip-info__description .trip-info__description-section p {
+  font-family: ProximaNova;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 0px; }
+
+.trip-info .trip-info__continue-reading a {
+  color: #5CABC3;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  border: 1px solid #5CABC3;
+  border-radius: 3px;
+  font-family: ProximaNova;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 12px 40px; }
+  .trip-info .trip-info__continue-reading a:link {
+    color: #5CABC3;
+    text-decoration: none; }
+  .trip-info .trip-info__continue-reading a:visited {
+    color: #5CABC3;
+    text-decoration: none; }
+  .trip-info .trip-info__continue-reading a:hover {
+    color: #5CABC3;
+    text-decoration: none; }
+  .trip-info .trip-info__continue-reading a:active {
+    color: #5CABC3;
+    text-decoration: none; }

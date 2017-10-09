@@ -20,6 +20,28 @@
     -moz-border-radius: $radius;
 }
 
+@mixin link-no-style($color) {
+    color: $color;
+    text-decoration: none;
+
+    &:link {
+        color: $color;
+        text-decoration: none;
+    }
+    &:visited {
+        color: $color;
+        text-decoration: none;
+    }
+    &:hover {
+        color: $color;
+        text-decoration: none;
+    }
+    &:active {
+        color: $color;
+        text-decoration: none;
+    }
+}
+
 /* A SASS Mixin for a border arrow. Direction can be top, left, bottom, or right. */
 
 @mixin box-arrow($selector, $direction, $size, $borderWidth, $color, $borderColor) {
