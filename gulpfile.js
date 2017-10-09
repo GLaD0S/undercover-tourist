@@ -13,7 +13,8 @@ var files = {
 		devLocation + '/sass/app.scss'
 	],
 	'js': [
-		devLocation + '/vendor/js/jquery-3.2.1.min.js'
+		devLocation + '/vendor/js/jquery-3.2.1.min.js',
+		devLocation + '/blocks/accordion/accordion.js'
 	],
 	'sassWatch': [
 		devLocation + '/sass/**/*.*',

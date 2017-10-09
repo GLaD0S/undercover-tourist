@@ -87,3 +87,9 @@
         }
     }
 }
+
+@mixin list-no-style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
