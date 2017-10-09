@@ -3,22 +3,15 @@ $pageBodyMarginRight: 30px;
 #page-wrapper {
 	padding-left: 50px;
 	padding-right: 50px;
+}
 
+#page-wrapper {
 	#page-body {
 		width: calc(100% - #{$itineraryFormContainerWidth} - #{$pageBodyMarginRight});
 		margin-right: $pageBodyMarginRight;
 		float: left;
 	}
-}	
-#page-wrapper {
-	#page-sidebar {
-		max-width: $itineraryFormContainerWidth;
-		float: left;
-		position: relative;
-		bottom: $itineraryFormOffsetY;
-	}
 }
-
 
 @include mq($until: large) {
 	#page-wrapper {
@@ -29,6 +22,14 @@ $pageBodyMarginRight: 30px;
 	}
 }
 
+#page-wrapper {
+	#page-sidebar {
+		max-width: $itineraryFormContainerWidth;
+		float: left;
+		position: relative;
+		bottom: $itineraryFormOffsetY;
+	}
+}
 
 @include mq($until: large) {
 	#page-wrapper {
@@ -36,6 +37,14 @@ $pageBodyMarginRight: 30px;
 			margin: 0 auto;
 			bottom: auto;
 			float: none;
+		}
+	}
+}
+
+#page-wrapper {
+	#page-sidebar {
+		#itinerary-form {
+			margin-bottom: 45px;
 		}
 	}
 } 

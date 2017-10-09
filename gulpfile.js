@@ -14,7 +14,8 @@ var files = {
 	],
 	'js': [
 		devLocation + '/vendor/js/jquery-3.2.1.min.js',
-		devLocation + '/blocks/accordion/accordion.js'
+		devLocation + '/blocks/accordion/accordion.js',
+		devLocation + '/blocks/dialog-box/dialog-box.js'
 	],
 	'sassWatch': [
 		devLocation + '/sass/**/*.*',

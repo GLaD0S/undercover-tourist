@@ -38,7 +38,7 @@ $itineraryFormBorderColor: #CFE0E2;
     .itinerary-form__title {
         text-align: center;
         h1 {
-            color: $itineraryFormTitleColor;
+            color: $titleShellGreen;
             font-family: ProximaNova;
             font-size: 16px;
             font-weight: 700;
@@ -72,7 +72,7 @@ $itineraryFormBorderColor: #CFE0E2;
         font-size: 13px;
         font-weight: 400;
         padding: $itineraryFormItemPaddingY $itineraryFormItemPaddingY;
-        border: $itineraryFormBorder solid $formItemBorder;
+        border: $itineraryFormBorder solid $borderGrey;
         height: ($itineraryFormItemPaddingX * 2) + $itineraryFormItemHeight + $itineraryFormBorder;
         color: #4E4E4E;
     }

@@ -13,3 +13,10 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         });
     });
 })(jQuery);
+(function ($) {
+    $(document).ready(function() {
+        $('.dialog-box .dialog-box__content-close').on('click', function() {
+            $(this).parents('.dialog-box').hide();
+        });
+    });
+})(jQuery);
