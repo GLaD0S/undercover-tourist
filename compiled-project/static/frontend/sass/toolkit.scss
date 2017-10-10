@@ -1,0 +1,127 @@
+@mixin placeholder-color($color) {
+    
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin link-no-style($color) {
+    color: $color;
+    text-decoration: none;
+
+    &:link {
+        color: $color;
+        text-decoration: none;
+    }
+    &:visited {
+        color: $color;
+        text-decoration: none;
+    }
+    &:hover {
+        color: $color;
+        text-decoration: none;
+    }
+    &:active {
+        color: $color;
+        text-decoration: none;
+    }
+}
+
+/* A SASS Mixin for a border arrow. Direction can be top, left, bottom, or right. */
+
+@mixin box-arrow($selector, $direction, $size, $borderWidth, $color, $borderColor) {
+    #{$selector} {
+        & {
+            position: relative;
+            background: $color;
+            border: 4px solid $borderColor;
+        }
+        &:after, &:before {
+            @if $direction == 'top' {
+                bottom: 100%;
+                left: 50%;
+            }
+            @if $direction == 'right' {
+                left: 100%;
+                top: 50%;
+            }
+            @if $direction == 'bottom' {
+                top: 100%;
+                left: 50%;
+            }
+            @if $direction == 'left' {
+                right: 100%;
+                top: 50%;
+            }
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        &:after {
+            @if $direction == 'top' {
+                border-bottom-color: $color;
+            }
+            @if $direction == 'right' {
+                border-left-color: $color;
+            }
+            @if $direction == 'bottom' {
+                border-top-color: $color;
+            }
+            @if $direction == 'left' {
+                border-right-color: $color;
+            }
+            border-width: $size;
+            margin-left: -$size;
+        }
+        &:before {
+            @if $direction == 'top' {
+                border-bottom-color: $borderColor;
+            }
+            @if $direction == 'right' {
+                border-left-color: $borderColor;
+            }
+            @if $direction == 'bottom' {
+                border-top-color: $borderColor;
+            }
+            @if $direction == 'left' {
+                border-right-color: $borderColor;
+            }
+            border-width: $size + $borderWidth;
+            margin-left: -($size + $borderWidth);
+        }
+    }
+}
+
+@mixin clear-after {
+    &::after {
+        content: "."; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
+    }
+}
+
+@mixin list-no-style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,126 @@
+$pageBodyMarginRight: 30px;
+
+/* Page wrapper */
+#page-wrapper {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	border-bottom: 1px dashed $borderGrey;
+
+	@include clear-after;
+}
+
+@include mq($until: medium) {
+	#page-wrapper {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+/* Page body */
+#page-wrapper {
+	#page-body {
+		width: calc(100% - #{$itineraryFormContainerWidth} - #{$pageBodyMarginRight});
+		margin-right: $pageBodyMarginRight;
+		float: left;
+	}
+}
+
+@include mq($until: large) {
+	#page-wrapper {
+		#page-body {
+			width: calc(100%);
+			float: none;
+		}
+	}
+}
+
+/* Page sidebar */
+#page-wrapper {
+	#page-sidebar {
+		max-width: $itineraryFormContainerWidth;
+		float: left;
+		position: relative;
+		bottom: $itineraryFormOffsetY;
+	}
+}
+
+@include mq($until: large) {
+	#page-wrapper {
+		#page-sidebar {
+			margin: 0 auto;
+			bottom: auto;
+			float: none;
+		}
+	}
+}
+
+@include mq($until: small) {
+	#page-wrapper {
+		#page-sidebar {
+			max-width: 100%;
+		}
+	}
+}
+
+/* Page footer */
+#page-footer {
+	text-align: center;
+}
+
+#page-footer {
+	img {
+		width: 120px;
+		margin: 0 auto;
+	}
+}
+
+#page-footer {
+	p {
+		font-family: ProximaNova;
+		font-size: 14px;
+		font-style: italic;
+		color: $oceanTurtleBlue;
+		margin-bottom: 25px;
+	}
+}
+
+
+
+/* Trip Info Block page specific spacing */
+#page-wrapper {
+	#page-body {
+		.trip-info {
+			margin-top: 35px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+/* Accordion Block page specific spacing */
+#page-wrapper {
+	#page-body {
+		.accordion {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+/* Itinerary Form Block page specific spacing */
+#page-wrapper {
+	#page-sidebar {
+		#itinerary-form {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+/* Dialog Box Bock page specific spacing */
+#page-wrapper {
+	#page-sidebar {
+		.dialog-box {
+			margin-bottom: 40px;
+		}
+	}
+}

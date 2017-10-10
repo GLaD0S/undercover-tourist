@@ -1,7 +1,7 @@
 # Undercover Tourist Frontend Coding Challenge
 The project can be viewed in two forms.
   1. As compiled html, css, and javascript.
-            - Located at /compiled_project
+            - Located at /compiled-project
   2. As a nodejs served app.
             - Uncompiled assets found at /static and /views
 

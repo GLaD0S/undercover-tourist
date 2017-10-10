@@ -1,0 +1,57 @@
+$dialogSize: 20px;
+
+.dialog-box {
+	position: relative;
+	border: 1px solid $borderGrey;
+}
+
+.dialog-box {
+	.dialog-box__content {
+		.dialog-box__content-close {
+			background-image: url('/static/assets/images/close-button.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: $dialogSize;
+			height: $dialogSize;
+			position: absolute;
+			right: calc(-#{$dialogSize / 2});
+			top: calc(-#{$dialogSize / 2});
+			cursor: pointer;
+		}
+	}
+}
+
+.dialog-box {
+	.dialog-box__content {
+		.dialog-box__content-text {
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.dialog-box__content {
+	.dialog-box__content-text {
+		h1.dialog-box__content-text-message {
+			font-family: ProximaNova;
+			font-size: 16px;
+			font-weight: 700;
+			color: $titleShellGreen;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.dialog-box__content {
+	.dialog-box__content-text {
+		p.dialog-box__content-text-aside {
+			font-family: ProximaNova;
+			font-size: 14px;
+			font-style: italic;
+			color: $oceanTurtleBlue;
+			margin: 0;
+		}
+	}
+}
