@@ -18,7 +18,7 @@ BEM blocks should not be positionally spaced with margin. They should be able to
 
 All javascript relating to BEM css blocks can be found within the same folder as a block's corresponding Sass file. Located at /static/frontend/blocks/.
 
-All javascript using Jquery should use an anonymous self calling function which binds jQuery to $. This technique is used to not pollute the global namespace to allow the global scoped variable $ to be bound do other libraries if nessicary.
+All javascript using Jquery should use an anonymous self calling function which binds jQuery to $. This technique is used to not pollute the global namespace to allow the global scoped variable $ to be bound do other libraries if necessary.
 
 Here is an example of the above described technique.
 
