@@ -22,7 +22,7 @@ All javascript using Jquery should use an anonymous self calling function which 
 
 Here is an example of the above described technique.
 
-     (function ($) {
+    (function ($) {
         // you can now use jQuery() as $() locally
         $(document).ready(function() {
         });
@@ -33,11 +33,19 @@ Node was chosen simply as a means of compiling template files and serving static
 
 ### Project dependencies
 [Sass](http://sass-lang.com/)
+
 [SassMQ](https://github.com/sass-mq/sass-mq)
+
 [Normalize CSS](https://necolas.github.io/normalize.css/)
+
 [HTML5 Boilerplate](https://html5boilerplate.com/)
+
 [jQuery](https://jquery.com/)
+
 [Mustache](https://mustache.github.io/)
+
 [Gulp](https://gulpjs.com/)
+
 [Node](https://nodejs.org/en/)
+
 Various node modules found in package.js
