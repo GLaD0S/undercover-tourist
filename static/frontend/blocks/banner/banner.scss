@@ -22,6 +22,7 @@
         padding-top: 55px;
         padding-bottom: 55px;
         left: 200px;
+        width: calc(100% - 200px);
     }
 }
 
@@ -73,6 +74,16 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin: 0;
+        }
+    }
+}
+
+@include mq($until: medium) {
+    .banner__cta {
+        .banner__cta-inner {
+            h1.banner__cta-text {
+                font-size: 35px;
+            }
         }
     }
 }

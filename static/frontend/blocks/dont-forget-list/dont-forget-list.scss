@@ -1,11 +1,5 @@
 .dont-forget {
-	&:after {
-		content: "."; 
-        visibility: hidden; 
-        display: block; 
-        height: 0; 
-        clear: both;
-	}
+	@include clear-after;
 }
 
 .dont-forget {
@@ -23,7 +17,7 @@
 		}
 
 		.dont-forget__section:first-child {
-			margin-top: 25px;
+			padding-top: 25px;
 		}
 
 		.dont-forget__section:last-child {

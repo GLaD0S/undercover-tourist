@@ -1,20 +1,13 @@
 $pageBodyMarginRight: 30px;
 
 /* Page wrapper */
-
 #page-wrapper {
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-bottom: 40px;
 	border-bottom: 1px dashed $borderGrey;
 
-	&:after {
-        content: "."; 
-        visibility: hidden; 
-        display: block; 
-        height: 0; 
-        clear: both;
-	}
+	@include clear-after;
 }
 
 @include mq($until: medium) {
@@ -25,7 +18,6 @@ $pageBodyMarginRight: 30px;
 }
 
 /* Page body */
-
 #page-wrapper {
 	#page-body {
 		width: calc(100% - #{$itineraryFormContainerWidth} - #{$pageBodyMarginRight});
@@ -44,7 +36,6 @@ $pageBodyMarginRight: 30px;
 }
 
 /* Page sidebar */
-
 #page-wrapper {
 	#page-sidebar {
 		max-width: $itineraryFormContainerWidth;
@@ -60,6 +51,14 @@ $pageBodyMarginRight: 30px;
 			margin: 0 auto;
 			bottom: auto;
 			float: none;
+		}
+	}
+}
+
+@include mq($until: small) {
+	#page-wrapper {
+		#page-sidebar {
+			max-width: 100%;
 		}
 	}
 }
@@ -89,7 +88,6 @@ $pageBodyMarginRight: 30px;
 
 
 /* Trip Info Block page specific spacing */
-
 #page-wrapper {
 	#page-body {
 		.trip-info {
@@ -110,7 +108,6 @@ $pageBodyMarginRight: 30px;
 
 
 /* Itinerary Form Block page specific spacing */
-
 #page-wrapper {
 	#page-sidebar {
 		#itinerary-form {
@@ -119,6 +116,7 @@ $pageBodyMarginRight: 30px;
 	}
 }
 
+/* Dialog Box Bock page specific spacing */
 #page-wrapper {
 	#page-sidebar {
 		.dialog-box {

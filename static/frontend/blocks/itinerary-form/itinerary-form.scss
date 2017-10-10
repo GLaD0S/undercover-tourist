@@ -13,10 +13,24 @@ $itineraryFormBorderColor: #CFE0E2;
 @include form-grid('#itinerary-form__form', 15px, 10px);
 @include box-arrow('#itinerary-form', 'bottom', 30px, 2px, $itineraryFormContainerColor, $itineraryFormBorderColor);
 
+
+/* Override for box arrow */
+#itinerary-form {
+    &:after {
+        border-width: 16px 30px 0 30px;
+    }
+
+    &:before {
+        border-width: 16px 30px 0 30px;
+        top: calc(100% + 2px);
+        left: calc(50% + 2px);
+    }
+}
+
 #itinerary-form {
     padding: $itineraryFormContainerPaddingX $itineraryFormContainerPaddingY;
     background-color: $itineraryFormContainerColor;
-    max-width: 340px;
+    max-width: $itineraryFormContainerWidth;
     border: 2px solid $itineraryFormBorderColor;
 
 }
@@ -53,6 +67,14 @@ $itineraryFormBorderColor: #CFE0E2;
     margin: 0 auto;
 }
 
+@include mq($until: medium) { 
+   #itinerary-form__container {
+        padding-left: 0;
+        padding-right: 0;
+   }
+}
+
+/* Baseline form styles for input boxes */
 #itinerary-form__form {
     select {
         width: 100%;
@@ -94,38 +116,35 @@ $itineraryFormBorderColor: #CFE0E2;
 }
 
 /* Override form-grid defaults for 33% width items */
+@include mq($from: medium) { 
+    #itinerary-form__form {
+        .form-row {
+            .itinerary-city {
+                width: 120px;
+            }
+        }
+    }
 
-#itinerary-form__form {
-    .form-row {
-        .itinerary-city {
-            width: 120px;
+    #itinerary-form__form {
+        .form-row {
+            .itinerary-state {
+                width: 70px;
+            }
         }
     }
-}
-#itinerary-form__form {
-    .form-row {
-        .itinerary-state {
-            width: 70px;
-        }
-    }
-}
-#itinerary-form__form {
-    .form-row {
-        .itinerary-zip {
-            width: 70px;
+
+    #itinerary-form__form {
+        .form-row {
+            .itinerary-zip {
+                width: 70px;
+            }
         }
     }
 }
 
+/* Last row styles specific to the itinerary form box */
 #itinerary-form__form {
     .itinerary-form__form-row-last {
         margin-bottom: 25px;
     }
-}
-
-@include mq($until: medium) { 
-   #itinerary-form__container {
-        padding-left: 0;
-        padding-right: 0;
-   }
 }

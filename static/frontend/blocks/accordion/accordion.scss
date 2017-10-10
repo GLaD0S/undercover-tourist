@@ -2,64 +2,63 @@ $accordionControlsColor: #5CABC3;
 $accordianControlsHeight: 32px;
 $accordianControlsOpenCloseSize: 18px;
 
-.accordion {
-
+.accordion__controls {
+    background-color: $oceanTurtleBlue;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .accordion__controls {
-	background-color: $oceanTurtleBlue;
+    h1.accordion__controls-title {
+        font-family: ProximaNova;
+        font-size: 18px;
+        font-weight: bold;
+        color: $white;
+        margin: 0;
+        margin-left: 15px;
+        line-height: $accordianControlsHeight;
+        letter-spacing: 1px;
+    }
 }
 
 .accordion__controls {
-	h1.accordion__controls-title {
-		font-family: ProximaNova;
-		font-size: 18px;
-		font-weight: bold;
-		color: $white;
-		margin: 0;
-		margin-left: 15px;
-		line-height: $accordianControlsHeight;
-		letter-spacing: 1px;
-	}
+    span.accordion__open-close {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 4px;
+        background-image: url('/static/assets/images/circle-arrow-down-white.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
 }
 
 .accordion__controls {
-	span.accordion__open-close {
-		display: inline-block;
-		width: 18px;
-		height: 18px;
-		position: relative;
-		top: 4px;
-		background-image: url('/static/assets/images/circle-arrow-down-white.svg');
-		background-size: contain;
-		background-repeat: no-repeat;
-		cursor: pointer;
-	}
-}
+    .accordion__open-close.accordion__open-close_opened {
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+    }
 
-.accordion__controls {
-	.accordion__open-close.accordion__open-close_opened {
-		//background-image: url('/static/assets/images/circle-arrow-right-white.svg');
-		transform: rotate(0deg);
-		transition: transform 0.3s;
-	}
-
-	.accordion__open-close.accordion__open-close_closed {
-		//background-image: url('/static/assets/images/circle-arrow-down-white.svg');
-		transform: rotate(-90deg);
-		transition: transform 0.3s;
-	}
+    .accordion__open-close.accordion__open-close_closed {
+        transform: rotate(-90deg);
+        transition: transform 0.3s;
+    }
 }
 
 .accordion__content {
-	border: 2px solid $oceanTurtleBlue;
+    border: 2px solid $oceanTurtleBlue;
+    border-top: none;
+    position: relative;
+    bottom: 3px;
 }
 
 .accordion__content {
-	&.accordion__content_opened {
-		display: block;
-	}
-	&.accordion__content_closed {
-		display: none;
-	}
+    &.accordion__content_opened {
+        display: block;
+    }
+    &.accordion__content_closed {
+        display: none;
+    }
 }

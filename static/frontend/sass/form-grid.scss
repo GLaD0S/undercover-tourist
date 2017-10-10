@@ -1,6 +1,6 @@
 /*
     A sass mixin approach for a very simple micro form grid system.
-    Good for simple forms, where form row margin and form item spacing is not consistent across site or page.
+    Good for simple forms, where form row margin and form item margin is not consistent across site or page.
     A decent starting point that could be expanded upon if no form framework were available or suited your needs.
 */
 
@@ -21,13 +21,7 @@
             width: 100%;
             margin-bottom: $rowMargin;
 
-            &::after {
-                content: "."; 
-                visibility: hidden; 
-                display: block; 
-                height: 0; 
-                clear: both;
-            }
+            @include clear-after;
         }
         
         .form-row {

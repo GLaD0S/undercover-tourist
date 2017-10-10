@@ -636,8 +636,9 @@ textarea {
 */
 /* A SASS Mixin for a border arrow. Direction can be top, left, bottom, or right. */
 /*
-    A sass mixin approach for a very micro form grid.
-    Good for simple forms, where form row margin and form item spacing is not consistent across site or page.
+    A sass mixin approach for a very simple micro form grid system.
+    Good for simple forms, where form row margin and form item margin is not consistent across site or page.
+    A decent starting point that could be expanded upon if no form framework were available or suited your needs.
 */
 /* Page wrapper */
 #page-wrapper {
@@ -645,7 +646,7 @@ textarea {
   margin-right: 50px;
   margin-bottom: 40px;
   border-bottom: 1px dashed #E3E3E3; }
-  #page-wrapper:after {
+  #page-wrapper::after {
     content: ".";
     visibility: hidden;
     display: block;
@@ -681,6 +682,10 @@ textarea {
     bottom: auto;
     float: none; } }
 
+@media (max-width: 19.99em) {
+  #page-wrapper #page-sidebar {
+    max-width: 100%; } }
+
 /* Page footer */
 #page-footer {
   text-align: center; }
@@ -709,6 +714,7 @@ textarea {
 #page-wrapper #page-sidebar #itinerary-form {
   margin-bottom: 45px; }
 
+/* Dialog Box Bock page specific spacing */
 #page-wrapper #page-sidebar .dialog-box {
   margin-bottom: 40px; }
 
@@ -734,7 +740,8 @@ textarea {
   position: relative;
   padding-top: 55px;
   padding-bottom: 55px;
-  left: 200px; }
+  left: 200px;
+  width: calc(100% - 200px); }
 
 @media (max-width: 63.99em) {
   .banner .banner__cta {
@@ -761,42 +768,45 @@ textarea {
   letter-spacing: 1px;
   margin: 0; }
 
+@media (max-width: 39.99em) {
+  .banner__cta .banner__cta-inner h1.banner__cta-text {
+    font-size: 35px; } }
+
 /* Itineray Form Block */
-#itinerary-form__form input, #itinerary-form__form select, #itinerary-form__form textarea {
-  width: 100%;
-  box-sizing: border-box;
-  display: block; }
-
-#itinerary-form__form select {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-#itinerary-form__form .form-row {
-  width: 100%;
-  margin-bottom: 15px; }
-  #itinerary-form__form .form-row::after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both; }
-
-#itinerary-form__form .form-row .form-item {
-  float: left; }
-
-#itinerary-form__form .form-row .form-item-width-100 {
-  width: 100%; }
-
-#itinerary-form__form .form-row .form-item-width-50 {
-  width: calc(50% - (10px/2));
-  margin-right: 10px; }
-
-#itinerary-form__form .form-row .form-item-width-33 {
-  width: calc(33% - (20px/3));
-  margin-right: 10px; }
-
-#itinerary-form__form .form-row .form-item:last-child {
-  margin-right: 0px; }
+#itinerary-form__form {
+  /* There should be more optional styles for mobile, but for this example, I have only included one */ }
+  #itinerary-form__form input, #itinerary-form__form select, #itinerary-form__form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    display: block; }
+  #itinerary-form__form select {
+    margin-top: 0;
+    margin-bottom: 0; }
+  #itinerary-form__form .form-row {
+    width: 100%;
+    margin-bottom: 15px; }
+    #itinerary-form__form .form-row::after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both; }
+  #itinerary-form__form .form-row .form-item {
+    float: left; }
+  #itinerary-form__form .form-row .form-item-width-100 {
+    width: 100%; }
+  #itinerary-form__form .form-row .form-item-width-50 {
+    width: calc(50% - (10px/2));
+    margin-right: 10px; }
+  #itinerary-form__form .form-row .form-item-width-33 {
+    width: calc(33% - (20px/3));
+    margin-right: 10px; }
+  #itinerary-form__form .form-row .form-item:last-child {
+    margin-right: 0px; }
+  @media (max-width: 39.99em) {
+    #itinerary-form__form .form-row .form-item-width-33-small-100 {
+      width: 100%;
+      margin-bottom: 15px; } }
 
 #itinerary-form {
   position: relative;
@@ -823,10 +833,19 @@ textarea {
   border-width: 32px;
   margin-left: -32px; }
 
+/* Override for box arrow */
+#itinerary-form:after {
+  border-width: 16px 30px 0 30px; }
+
+#itinerary-form:before {
+  border-width: 16px 30px 0 30px;
+  top: calc(100% + 2px);
+  left: calc(50% + 2px); }
+
 #itinerary-form {
   padding: 25px 15px;
   background-color: #D8EEEF;
-  max-width: 340px;
+  max-width: 320px;
   border: 2px solid #CFE0E2; }
 
 #itinerary-form .itinerary-form__avatar {
@@ -855,6 +874,12 @@ textarea {
   max-width: 280px;
   margin: 0 auto; }
 
+@media (max-width: 39.99em) {
+  #itinerary-form__container {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Baseline form styles for input boxes */
 #itinerary-form__form select {
   width: 100%;
   height: 45px;
@@ -908,26 +933,23 @@ textarea {
   cursor: pointer; }
 
 /* Override form-grid defaults for 33% width items */
-#itinerary-form__form .form-row .itinerary-city {
-  width: 120px; }
+@media (min-width: 40em) {
+  #itinerary-form__form .form-row .itinerary-city {
+    width: 120px; }
+  #itinerary-form__form .form-row .itinerary-state {
+    width: 70px; }
+  #itinerary-form__form .form-row .itinerary-zip {
+    width: 70px; } }
 
-#itinerary-form__form .form-row .itinerary-state {
-  width: 70px; }
-
-#itinerary-form__form .form-row .itinerary-zip {
-  width: 70px; }
-
+/* Last row styles specific to the itinerary form box */
 #itinerary-form__form .itinerary-form__form-row-last {
   margin-bottom: 25px; }
 
-@media (max-width: 39.99em) {
-  #itinerary-form__container {
-    padding-left: 0;
-    padding-right: 0; } }
-
 /* Accordian Block */
 .accordion__controls {
-  background-color: #5CABC3; }
+  background-color: #5CABC3;
+  border-radius: 3px;
+  cursor: pointer; }
 
 .accordion__controls h1.accordion__controls-title {
   font-family: ProximaNova;
@@ -959,7 +981,10 @@ textarea {
   transition: transform 0.3s; }
 
 .accordion__content {
-  border: 2px solid #5CABC3; }
+  border: 2px solid #5CABC3;
+  border-top: none;
+  position: relative;
+  bottom: 3px; }
 
 .accordion__content.accordion__content_opened {
   display: block; }
@@ -968,7 +993,7 @@ textarea {
   display: none; }
 
 /* Dont Forget List Block */
-.dont-forget:after {
+.dont-forget::after {
   content: ".";
   visibility: hidden;
   display: block;
@@ -984,7 +1009,7 @@ textarea {
     width: 100%;
     float: none; }
   .dont-forget .dont-forget__section:first-child {
-    margin-top: 25px; }
+    padding-top: 25px; }
   .dont-forget .dont-forget__section:last-child {
     margin-bottom: 25px; } }
 
@@ -1017,7 +1042,7 @@ ul.dont-forget__list li.dont-forget__list-item:before {
   border: 1px solid #E3E3E3; }
 
 .dialog-box .dialog-box__content .dialog-box__content-close {
-  background-image: url("/static/assets/images/close-button.png");
+  background-image: url("/static/assets/images/close-button.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;
@@ -1064,7 +1089,7 @@ ul.dont-forget__list li.dont-forget__list-item:before {
 
 .trip-info .trip-info__description {
   margin-bottom: 10px; }
-  .trip-info .trip-info__description:after {
+  .trip-info .trip-info__description::after {
     content: ".";
     visibility: hidden;
     display: block;

@@ -1,16 +1,6 @@
 $descriptionSectionMargin: 30px;
 
 .trip-info {
-
-}
-
-.trip-info {
-	.trip-info__heading {
-
-	}	
-}
-
-.trip-info {
 	.trip-info__heading {
 		h1 {
 			font-family: Oswald;
@@ -37,13 +27,7 @@ $descriptionSectionMargin: 30px;
 .trip-info {
 	.trip-info__description {
 		margin-bottom: 10px;
-		&:after {
-			content: "."; 
-            visibility: hidden; 
-            display: block; 
-            height: 0; 
-            clear: both;
-		}
+		@include clear-after;
 	}	
 }
 
@@ -81,12 +65,6 @@ $descriptionSectionMargin: 30px;
 			margin-top: 0px;
 		}
 	}
-}
-
-.trip-info {
-	.trip-info__continue-reading {
-		
-	}	
 }
 
 .trip-info {

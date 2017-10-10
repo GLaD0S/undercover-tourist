@@ -7,14 +7,8 @@ $dialogSize: 20px;
 
 .dialog-box {
 	.dialog-box__content {
-
-	}
-}
-
-.dialog-box {
-	.dialog-box__content {
 		.dialog-box__content-close {
-			background-image: url('/static/assets/images/close-button.png');
+			background-image: url('/static/assets/images/close-button.svg');
 			background-size: contain;
 			background-repeat: no-repeat;
 			width: $dialogSize;
