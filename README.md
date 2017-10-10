@@ -1,9 +1,9 @@
 # Undercover Tourist Frontend Coding Challenge
 The project can be viewed in two forms.
   1. As compiled html, css, and javascript.
-            - Located at /compiled-project
+        - Located at /compiled-project
   2. As a nodejs served app.
-            - Uncompiled assets found at /static and /views
+        - Uncompiled assets found at /static and /views
 
 ## Project notes
 Undercover Tourist heavily uses the foundation frontend framework. In normal circumstances I would prefer to use a common tool when writing marketing pages, but I decided to forgo any framework to show what I can do without one.
@@ -18,7 +18,7 @@ BEM blocks should not be positionally spaced with margin. They should be able to
 
 All javascript relating to BEM css blocks can be found within the same folder as a block's corresponding Sass file. Located at /static/frontend/blocks/.
 
-All javascript using Jquery should use an anonymous self calling function which binds jQuery to $. This technique is used to not pollute the global namespace to allow the global scoped variable $ to be bound do other libraries if necessary.
+All javascript using Jquery should use an anonymous self calling function which binds jQuery to $. This technique is used to not pollute the global namespace to allow the global scoped variable $ to be bound to other libraries if necessary.
 
 Here is an example of the above described technique.
 
